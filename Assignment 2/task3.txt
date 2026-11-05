@@ -1,0 +1,16 @@
+import pytest
+
+def is_adult(age):
+    if age < 0:
+        raise ValueError("Age cannot be negative")
+    return age >= 18
+
+def test_is_adult_17():
+    assert is_adult(17) is False
+
+def test_is_adult_18():
+    assert is_adult(18) is True
+
+def test_is_adult_negative():
+    with pytest.raises(ValueError):
+        is_adult(-1)

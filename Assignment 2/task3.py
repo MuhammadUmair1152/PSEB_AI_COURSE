@@ -14,7 +14,3 @@ def test_is_adult_18():
 def test_is_adult_negative():
     with pytest.raises(ValueError):
         is_adult(-1)
-
-# print(test_is_adult_17())
-# print(test_is_adult_18())
-# print(test_is_adult_negative())
